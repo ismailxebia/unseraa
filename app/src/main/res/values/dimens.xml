@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="dialog_corners">4dp</dimen>
+    <dimen name="dialog_corners_c">0dp</dimen>
+</resources>
