@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
-                android:text="Muhammad Rozali"
+                android:text="Hendry Saputra"
                 android:textSize="13dp"
                 android:textColor="#151515"
                 android:textStyle="bold" />
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="4dp"
-                android:text="4m ago"
+                android:text="2m ago"
                 android:layout_gravity="center"
                 android:textSize="11dp"
                 android:textColor="#8b8b8b"

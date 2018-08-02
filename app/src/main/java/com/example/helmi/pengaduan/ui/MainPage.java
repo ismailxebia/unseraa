@@ -217,7 +217,7 @@ public class MainPage extends AppCompatActivity {
 
         // center item click listener
         bind.fab.setOnClickListener((View.OnClickListener) view -> {
-            Intent i = new Intent(MainPage.this,AddReportActivity.class);
+            Intent i = new Intent(MainPage.this,ShareActivity.class);
             startActivity(i);
 
         });

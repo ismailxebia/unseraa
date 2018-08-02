@@ -105,6 +105,7 @@
                         android:textSize="12sp" />
 
                     <RelativeLayout
+                        android:id="@+id/rl_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
@@ -114,7 +115,7 @@
                         <com.joooonho.SelectableRoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                             android:id="@+id/iv_ktp"
                             android:layout_width="match_parent"
-                            android:layout_height="135dp"
+                            android:layout_height="145dp"
                             android:scaleType="centerCrop"
                             app:sriv_left_bottom_corner_radius="4dip"
                             app:sriv_left_top_corner_radius="4dip"
@@ -304,14 +305,37 @@
 
                     </LinearLayout>
 
-                    <RelativeLayout
+                    <FrameLayout
+                        android:id="@+id/locationMarker"
                         android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:layout_marginTop="16dp"
-                        android:background="@drawable/round_grey"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
-                    </RelativeLayout>
+                        <include
+                            layout="@layout/content_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp" />
+
+                        <LinearLayout
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ico_map"
+                            android:gravity="center"
+                            android:orientation="horizontal" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                    </FrameLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -369,6 +393,7 @@
                             android:layout_weight="1" />
 
                         <LinearLayout
+                            android:id="@+id/submit_btn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

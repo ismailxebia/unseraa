@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+//import com.bumptech.glide.Glide;
 import com.example.helmi.pengaduan.R;
 import com.example.helmi.pengaduan.model.UserAccountSettings;
 import com.example.helmi.pengaduan.model.UserSettings;
@@ -28,6 +29,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.pixplicity.fontview.FontAppCompatTextView;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindDimen;
 import butterknife.BindView;
@@ -93,6 +95,12 @@ public class ProfileFragment extends Fragment {
         //User user = userSettings.getUser();
         UserAccountSettings settings = userSettings.getSettings();
 
+        Picasso.get()
+                .load(settings.getProfile_photo())
+                .into(mProfilePhoto);
+        //Glide.with(getActivity())
+        //        .load(settings.getProfile_photo())
+        //        .into(mProfilePhoto);
         //UniversalImageLoader.setImage(settings.getProfile_photo(), mProfilePhoto, null, "");
         mDisplayName.setText(settings.getDisplay_name());
         mUsername.setText(settings.getUsername());

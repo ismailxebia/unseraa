@@ -33,6 +33,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -170,6 +171,9 @@ public class AccountSettingsActivity extends AppCompatActivity {
         mUserSettings = userSettings;
         //User user = userSettings.getUser();
         UserAccountSettings settings = userSettings.getSettings();
+        Picasso.get()
+                .load(settings.getProfile_photo())
+                .into(mProfilePhoto);
         //UniversalImageLoader.setImage(settings.getProfile_photo(), mProfilePhoto, null, "");
         mDisplayName.setText(settings.getDisplay_name());
         mUsername.setText(settings.getUsername());
